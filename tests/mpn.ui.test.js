@@ -1,7 +1,6 @@
-const { test, expect } = require('@playwright/test');
-
+import { test,  expect } from '@playwright/test';
 test.describe('test mpn spa', () => {
-  test('Test MPN Lookup title', async ({ page }) => {
+  test('MPN Lookup title', async ({ page }) => {
     await page.goto('http://localhost:3000/');
     const titleLabel = await page.getByTestId('mpn-lookup-title');
     const titleVisible = await titleLabel.isVisible();
