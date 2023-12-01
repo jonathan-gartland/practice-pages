@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
-    "test": "react-scripts --open-ssl-legacy-provider test --watchAll=false --no-cache --forceExit",
+    "test": "react-scripts test --watchAll=false --no-cache --forceExit",
     "test:e2e": "playwright test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
