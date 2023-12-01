@@ -26,6 +26,6 @@ jobs:
       with:
         node-version: 20
         cache: 'npm'
-    - run: npm ci
+    - run: npm ci --legacy-peer-deps
     - run: npm run build --if-present
-    - run: npm test --watchAll=false --no-cache --forceExit
+    - run: npm test -- --watchAll=false
