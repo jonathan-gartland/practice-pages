@@ -1,4 +1,4 @@
-import { test,  expect } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 test.describe('test mpn spa', () => {
   test('MPN Lookup title', async ({ page }) => {
     await page.goto('http://localhost:3000/');
