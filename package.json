@@ -19,7 +19,8 @@
     "test:e2e": "playwright test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +44,7 @@
     "@playwright/test": "^1.40.1",
     "@types/node": "^20.10.1",
     "gh-pages": "^6.1.0",
-    "mpn-lookup": "^1.0.7"
+    "mpn-lookup": "^1.0.7",
+    "husky": "^8.0.0"
   }
 }
