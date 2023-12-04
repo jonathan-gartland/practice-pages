@@ -26,37 +26,41 @@ export default function QTLForm() {
   }
 
   return (
-    <label>
-      <label id={'qt2k-title-label'} style={{ color: '#61dafb' }}>
-        QuantiTray2000&reg;
+    <div>
+      <label>
+        <label id={'qt2k-title-label'} style={{ color: '#61dafb' }}>
+          QuantiTray2000&reg;
+        </label>
+        <br />
+        <br />
+        {/* eslint-disable-next-line max-len */}
+        Enter Large Well Count:{' '}
+        <input
+          name={'QT2KLinput'}
+          id={'qt2klinput'}
+          value={in2KL}
+          onChange={(e) => setIn2KL(parseInt(e.target.value))}
+          type="number"
+          min="0"
+          max="49"
+          size="5"
+        />
+        <br />
+        {/* eslint-disable-next-line max-len */}
+        Enter Small Well Count:{' '}
+        <input
+          name={'QT2KSinput'}
+          id={'qt2ksinput'}
+          value={in2KS}
+          onChange={(e) => setIn2KS(parseInt(e.target.value))}
+          type="number"
+          min="0"
+          max="48"
+          size="5"
+        />
+        <br />
+        {<div>{mpn2K(in2KL, in2KS)}</div>}
       </label>
-      <br />
-      <br />
-      {/* eslint-disable-next-line max-len */}
-      Enter Large Well Count:{' '}
-      <input
-        name={'QT2KLinput'}
-        id={'qt2klinput'}
-        value={in2KL}
-        onChange={(e) => setIn2KL(parseInt(e.target.value))}
-        type="number"
-        min="0"
-        max="49"
-      />
-      <br />
-      {/* eslint-disable-next-line max-len */}
-      Enter Small Well Count:{' '}
-      <input
-        name={'QT2KSinput'}
-        id={'qt2ksinput'}
-        value={in2KS}
-        onChange={(e) => setIn2KS(parseInt(e.target.value))}
-        type="number"
-        min="0"
-        max="48"
-      />
-      <br />
-      {<div>{mpn2K(in2KL, in2KS)}</div>}
-    </label>
+    </div>
   );
 }

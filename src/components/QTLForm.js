@@ -24,19 +24,10 @@ export default function QT2KForm() {
 
   return (
     <label>
-      <label id={'qt2k-title-label'} style={{ color: '#61dafb' }}>
+      <label id={'qtl-title-label'} style={{ color: '#61dafb' }}>
         QuantiTray&reg; Legiolert
       </label>
       <br />
-      <br />
-      Enter Small Well Count:{' '}
-      <input
-        value={inSmall}
-        onChange={(e) => setInSmall(parseInt(e.target.value))}
-        type="number"
-        min="0"
-        max="90"
-      />
       <br />
       Enter Large Well Count:{' '}
       <input
@@ -45,6 +36,18 @@ export default function QT2KForm() {
         type="number"
         min="0"
         max="6"
+        style={{ marginLeft: '10px' }}
+        width={'34px'}
+      />
+      <br />
+      Enter Small Well Count:{' '}
+      <input
+        value={inSmall}
+        onChange={(e) => setInSmall(parseInt(e.target.value))}
+        type="number"
+        min="0"
+        max="90"
+        style={{ marginLeft: '10px' }}
       />
       <br />
       {<div>{mpnL(inSmall, inLarge)}</div>}
