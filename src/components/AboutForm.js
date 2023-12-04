@@ -4,7 +4,11 @@ export default function AboutForm() {
   return (
     <div
       id="aboutdiv"
-      style={{ borderRight: 'solid', marginRight: '5px', paddingRight: '15px' }}
+      style={{
+        borderRight: 'solid',
+        marginRight: '5px',
+        paddingRight: '15px',
+      }}
     >
       <div style={{ textAlign: 'left' }} data-testid={'about-text-id'}>
         Some folks work in water testing facilities that

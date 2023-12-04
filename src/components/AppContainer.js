@@ -24,7 +24,7 @@ export default function AppContainer() {
           <h5>Why does this even exist?</h5>
           <AboutForm />
         </div>
-        <div style={{ paddingLeft: '5px' }}>
+        <div style={{ paddingLeft: '5px', paddingTop: '60px' }}>
           <QTForm />
           <hr />
           <QT2KForm />
