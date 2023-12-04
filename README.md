@@ -20,4 +20,4 @@ And this is the 'solution' offered by the manufacturer/distributor.
 
 ## Why this app?
 
-It was an easy task to implement, and I wanted to learn React, this seemed realively simple.
+It was an easy task to implement, and I wanted to learn React, this seemed like relatively simple way to do so.
