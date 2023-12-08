@@ -7,9 +7,38 @@ test.describe('test mpn spa', () => {
     expect(titleVisible).toBeTruthy();
   });
 
-  test('About section', async ({ page }) => {
-    await page.goto('http://localhost:3000/');
-    expect(1).toEqual(1);
+  test.describe('About section', () => {
+    test.describe('test link navigation works', () => {
+      test('QT Info page link works', async ({ page }) => {
+        // Find the link, click it, verify new page, go back, verify back on app page
+        await page.goto('http://localhost:3000/');
+        const qtInfoLink = await page.getByTestId('qtlink');
+        await qtInfoLink.click();
+        await page.waitForURL('**/quanti-tray-system/', { timeout: 5000 });
+        const qtInfoHeader = await page.locator(
+          '#page-top > div.page-content > div > div:nth-child(1) > div:nth-child(2) > h1'
+        );
+        expect(await qtInfoHeader.isVisible()).toBeTruthy();
+        await page.goBack({ timeout: 5000 });
+        expect(await qtInfoLink.isVisible()).toBeTruthy();
+      });
+
+      test('MPN Generator page link works', async ({ page }) => {
+        // Find the link, click it, verify new page, go back, verify back on app page
+        await page.goto('http://localhost:3000/');
+        const qtInfoLink = await page.getByTestId('mpngen');
+        await qtInfoLink.click();
+        await page.waitForURL('**/mpn-generator/', { timeout: 5000 });
+        const mpnInfoHeader = await page.locator(
+          '#page-top > div.page-content > div > div:nth-child(1) > div:nth-child(2) > h1'
+        );
+        expect(await mpnInfoHeader.isVisible()).toBeTruthy();
+        await page.goBack({ timeout: 5000 });
+        expect(await qtInfoLink.isVisible()).toBeTruthy();
+      });
+
+      // todo : test pdf download link actions
+    });
   });
 
   test('QT section', async ({ page }) => {

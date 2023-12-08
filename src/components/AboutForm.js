@@ -21,6 +21,7 @@ export default function AboutForm() {
         see link for more info:
         <br />
         <a
+          data-testid={'qtlink'}
           style={{ color: 'teal' }}
           href="https://www.idexx.com/en/water/water-products-services/quanti-tray-system/"
         >
@@ -38,6 +39,7 @@ export default function AboutForm() {
         <br />
         Here is a link to one of the files, the one for the <br />
         <a
+          data-testid={'pdf-testid'}
           style={{ color: 'teal' }}
           href="https://www.idexx.com/files/qt97mpntable.pdf"
         >
@@ -49,6 +51,7 @@ export default function AboutForm() {
         To be helpful, the MPN Generator was created.
         <br />
         <a
+          data-testid={'mpngen'}
           style={{ color: 'teal' }}
           href="https://www.idexx.com/en/water/resources/mpn-generator/"
         >
