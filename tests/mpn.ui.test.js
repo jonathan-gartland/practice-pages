@@ -7,9 +7,11 @@ test.describe('test mpn spa', () => {
     expect(titleVisible).toBeTruthy();
   });
 
-  test('About section', async ({ page }) => {
-    await page.goto('http://localhost:3000/');
-    expect(1).toEqual(1);
+  test.describe('About section', () => {
+    test('test links work', async ({ page }) => {
+      await page.goto('http://localhost:3000/');
+      const qtInfoLink = await page.getByTestId('');
+    });
   });
 
   test('QT section', async ({ page }) => {
