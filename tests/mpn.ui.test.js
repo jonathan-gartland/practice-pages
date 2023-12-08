@@ -10,7 +10,13 @@ test.describe('test mpn spa', () => {
   test.describe('About section', () => {
     test('test links work', async ({ page }) => {
       await page.goto('http://localhost:3000/');
-      const qtInfoLink = await page.getByTestId('');
+      const qtInfoLink = await page.getByTestId('qtlink');
+      await qtInfoLink.click();
+      await page.waitForURL('**/quanti-tray-system/', { timeout: 2000 });
+      const qtInfoHeader = await page.locator(
+        '#page-top > div.page-content > div > div:nth-child(1) > div:nth-child(2) > h1'
+      );
+      expect(await qtInfoHeader.isVisible()).toBeTruthy();
     });
   });
 
