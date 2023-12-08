@@ -39,7 +39,7 @@ export default function AboutForm() {
         <br />
         Here is a link to one of the files, the one for the <br />
         <a
-          data-testid={'qt2klink'}
+          data-testid={'pdf-testid'}
           style={{ color: 'teal' }}
           href="https://www.idexx.com/files/qt97mpntable.pdf"
         >
