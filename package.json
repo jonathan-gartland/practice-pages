@@ -14,12 +14,16 @@
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
-    "test": "react-scripts test --watchAll=false --no-cache --forceExit",
+    "test": "react-scripts test --watchAll=false --no-cache --forceExit --detectOpenHandles",
     "test:e2e": "playwright test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,9 +47,14 @@
     "@testing-library/react": "^14.1.2",
     "@types/node": "^20.10.1",
     "dotenv": "^16.3.1",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
     "gh-pages": "^6.1.0",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "mpn-lookup": "^1.0.7",
-    "prettier": "3.1.0"
+    "prettier": "^3.2.2"
   }
 }
