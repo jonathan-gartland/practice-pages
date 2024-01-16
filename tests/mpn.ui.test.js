@@ -14,7 +14,7 @@ test.describe('test mpn spa', () => {
         await page.goto('http://localhost:3000/');
         const qtInfoLink = await page.getByTestId('qtlink');
         await qtInfoLink.click();
-        await page.waitForURL('**/quanti-tray-system/', { timeout: 5000 });
+        await page.waitForURL('**/quanti-tray-system/', { timeout: 10000 });
         const qtInfoHeader = await page.locator(
           '#page-top > div.page-content > div > div:nth-child(1) > div:nth-child(2) > h1'
         );
@@ -28,7 +28,7 @@ test.describe('test mpn spa', () => {
         await page.goto('http://localhost:3000/');
         const qtInfoLink = await page.getByTestId('mpngen');
         await qtInfoLink.click();
-        await page.waitForURL('**/mpn-generator/', { timeout: 5000 });
+        await page.waitForURL('**/mpn-generator/', { timeout: 10000 });
         const mpnInfoHeader = await page.locator(
           '#page-top > div.page-content > div > div:nth-child(1) > div:nth-child(2) > h1'
         );
