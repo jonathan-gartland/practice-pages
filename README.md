@@ -25,5 +25,5 @@ And this is the 'solution' offered by the manufacturer/distributor:
 
 ### Why this app though?
 
-It was an easy task to implement, and I wanted to learn React. It seemed like relatively simple way to do so.
+It was an easy task to implement using [mpn-lookup](https://github.com/jonathan-gartland/mpn-lookup), and I wanted to learn React. It seemed like relatively simple way to do so.
 
