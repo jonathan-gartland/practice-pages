@@ -26,15 +26,15 @@ test.describe('test mpn spa', () => {
       test('MPN Generator page link works', async ({ page }) => {
         // Find the link, click it, verify new page, go back, verify back on app page
         await page.goto('http://localhost:3000/');
-        const qtInfoLink = await page.getByTestId('mpngen');
-        await qtInfoLink.click();
+        const mpnInfoLink = await page.getByTestId('mpngen');
+        await mpnInfoLink.click();
         await page.waitForURL('**/mpn-generator/', { timeout: 10000 });
         const mpnInfoHeader = await page.locator(
           '#page-top > div.page-content > div > div:nth-child(1) > div:nth-child(2) > h1'
         );
         expect(await mpnInfoHeader.isVisible()).toBeTruthy();
         await page.goBack({ timeout: 5000 });
-        expect(await qtInfoLink.isVisible()).toBeTruthy();
+        expect(await mpnInfoLink.isVisible()).toBeTruthy();
       });
 
       // todo : test pdf download link actions
