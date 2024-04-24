@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -16,6 +16,7 @@
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test --watchAll=false --no-cache --forceExit",
     "test:e2e": "playwright test",
+    "test:perf": "k6 run --vus 10 --duration 30s /Users/jgartland/Projects/Node/node-20/practice-pages/tests/performance/load.mpn.js",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
