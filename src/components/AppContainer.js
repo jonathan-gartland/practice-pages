@@ -4,7 +4,10 @@ import QT2KForm from './QT2KForm';
 import QTLForm from './QTLForm';
 import React from 'react';
 import '../styles/App.css';
-
+/**
+ * The main entry point for the application.
+ * @return {JSX.Element}
+ */
 export default function AppContainer() {
   return (
     <div className="App">

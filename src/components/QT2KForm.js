@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import { getQt2KMpn } from 'mpn-lookup/mpn.lookup';
-
+/**
+ * QuantiTray 2K Form
+ * @return {JSX.Element}
+ */
 export default function QTLForm() {
   const [in2KL, setIn2KL] = useState(0);
   const [in2KS, setIn2KS] = useState(0);
-
+  /**
+   * @param {number} in2KL
+   * @param {number} in2KS
+   * @return {Element}
+   * */
   function mpn2K(in2KL, in2KS) {
     let mpn2KList = [];
     if (in2KL >= 0 && in2KL <= 49 && in2KS >= 0 && in2KS <= 48) {

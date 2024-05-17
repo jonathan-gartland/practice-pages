@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 import { getQtLegio } from 'mpn-lookup/mpn.lookup';
 
+/**
+ * QuantiTray 2K Form
+ * @return {JSX.Element}
+ */
 export default function QT2KForm() {
   const [inLarge, setInLarge] = useState(0);
   const [inSmall, setInSmall] = useState(0);
 
+  /**
+   * @param {number} inSmall
+   * @param {number} inLarge
+   * @return {Element}
+   */
   function mpnL(inSmall, inLarge) {
     let mpnLList = [];
 

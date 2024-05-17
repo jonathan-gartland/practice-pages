@@ -1,5 +1,5 @@
 import React from 'react';
-
+/** @return {JSX.Element} */
 export default function AboutForm() {
   return (
     <div

@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import { getQtMpn } from 'mpn-lookup/mpn.lookup';
 
+/**
+ * QuantiTray Form
+ * @return {JSX.Element}
+ */
 export default function QTForm() {
   const [inCount, setInCount] = useState(0);
 
+  /**
+   * @param {number} inCount
+   * @return {JSX.Element}
+   * */
   function mpn(inCount) {
     let mpnList = [];
     if (inCount >= 0 && inCount <= 51) {
